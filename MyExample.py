@@ -8,7 +8,7 @@ if __name__ == '__main__':
     Makes the visualization. """
 
     use_cuda = True
-    image_path = "./examples/im123.png"
+    image_path = "./data/im123.png"
 
     # Can work with any model, but it assumes that the model has a
     # feature method, and a classifier method,
@@ -27,7 +27,7 @@ if __name__ == '__main__':
     target_index = None
     mask = grad_cam(input, target_index)
 
-    "img: 归一化的 0~1"
+    # "img: 归一化的 0~1"
     show_cam_on_image(img, mask, heatmap_rate=1)
 
     # gb_model = GuidedBackpropReLUModel(model=model, use_cuda=args.use_cuda)
